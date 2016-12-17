@@ -1,0 +1,50 @@
+################# VERBOSE #########################
+### use negative number for memory output ###
+fluxVerbose 		  	 	-1
+eventVerbose 				-1
+trackingVerbose				-1
+
+################# FLUX ############################
+loadFluxBasketSize         		64000
+inputBeamFile		   		data/flux/Nu_flux_020614/NuDump_CPV400_v2.root
+fluxFileExposure			1.2e6
+exposure				1e7
+nuMaxEnergy                		30*GeV
+distance                   		800 m
+radiusCut		  	 	3 m
+flavour					0
+
+################ EVENT ############################
+runNumber 				1
+nIterations 				0	#use <=0 to use exposure instead
+###
+outputFileName 				test1.root
+geomFileName      			geometry_2x2x2.root
+GenieXSecSplines  			splines/gxspl_all.xml
+#targetVolume 				motherVolume
+#targetVolume  				vesselVolume
+#targetVolume  				rockVolume
+targetVolume  				tpcFidVolume
+wantGntp				0
+
+################ TRACKING #########################
+runVisMacro				0
+runGunMacro		  		0
+qeccOnly				0
+simGeomFileName           		geometry_2x2x2.gdml
+physicsList		  		FTFP_BERT
+hadroniclist				QGSP_BIC_HP
+#hadroniclist             		FTFP_BERT_HP
+emlist                    		EM4
+trackPiZero				0
+### input mag field strength in tesla ###
+magFieldStrength          		0.5*tesla
+simTargetVolume          		tpcFidVolume
+simEnergyCut		  		1.0*keV
+physicsDefaultCut	  		0.1*mm
+gammaCut		  		0.1*mm
+electronCut		  		0.1*mm
+positronCut               		0.1*mm
+neutronCut                		0.1*mm
+cutEM	                  		1.0*keV
+
